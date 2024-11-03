@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cevuknhbgrm4w"]
+
+[ext_resource type="Script" path="res://panel_bk.gd" id="1_tx6cu"]
+
+[node name="Panel" type="Panel"]
+custom_minimum_size = Vector2(200, 290)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_tx6cu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(200, 290)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="."]

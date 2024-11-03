@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cup2id452falu"]
+
+[ext_resource type="Script" path="res://scripts/GIcon.gd" id="1_5nin7"]
+[ext_resource type="Texture2D" uid="uid://yre7itl8vyrv" path="res://icon.svg" id="1_hm2qv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjgoe"]
+size = Vector2(200, 200)
+
+[node name="GodotIcon" type="Area2D" groups=["enemy"]]
+script = ExtResource("1_5nin7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(200, 200)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_hm2qv")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(100, 100)
+shape = SubResource("RectangleShape2D_tjgoe")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

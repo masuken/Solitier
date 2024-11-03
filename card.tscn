@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3jfd5ao5sa0a"]
+
+[ext_resource type="Texture2D" uid="uid://ei308uoetr0s" path="res://PNG-cards-1.3/2_of_clubs.png" id="1_o1j5b"]
+[ext_resource type="Script" path="res://scripts/card.gd" id="2_wrwvu"]
+[ext_resource type="Texture2D" uid="uid://db7gypaabl8lm" path="res://PNG-cards-1.3/back.jpg" id="3_cke5d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1upit"]
+size = Vector2(199, 293)
+
+[sub_resource type="Animation" id="Animation_qpsm3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("front:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.4, 0.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("front/back:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_smqws"]
+resource_name = "card_flip"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("front:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.225928, 0.40472),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.4, 0.4), Vector2(0.1, 0.4), Vector2(0.4, 0.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("front/back:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.183084, 0.222913),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, -1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5hdoy"]
+_data = {
+"RESET": SubResource("Animation_qpsm3"),
+"card_flip": SubResource("Animation_smqws")
+}
+
+[node name="Card" type="Area2D"]
+script = ExtResource("2_wrwvu")
+
+[node name="front" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_o1j5b")
+
+[node name="back" type="Sprite2D" parent="front"]
+scale = Vector2(1.16824, 1.1306)
+texture = ExtResource("3_cke5d")
+
+[node name="Button" type="Button" parent="front"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -363.0
+offset_right = -250.0
+offset_bottom = -363.0
+grow_horizontal = 2
+grow_vertical = 2
+action_mode = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-1.5, -1.5)
+shape = SubResource("RectangleShape2D_1upit")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5hdoy")
+}
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="pressed" from="front/Button" to="." method="_on_button_pressed"]

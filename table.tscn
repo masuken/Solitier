@@ -1,0 +1,118 @@
+[gd_scene load_steps=57 format=3 uid="uid://pdcicdurmn65"]
+
+[ext_resource type="PackedScene" uid="uid://c3jfd5ao5sa0a" path="res://card.tscn" id="1_3fj26"]
+[ext_resource type="Script" path="res://table.gd" id="1_xln7c"]
+[ext_resource type="Texture2D" uid="uid://bi3811s2vcr2v" path="res://PNG-cards-1.3/ace_of_clubs.png" id="3_duadt"]
+[ext_resource type="Texture2D" uid="uid://ei308uoetr0s" path="res://PNG-cards-1.3/2_of_clubs.png" id="4_v68qf"]
+[ext_resource type="Texture2D" uid="uid://ddexh8ml0rdu2" path="res://PNG-cards-1.3/3_of_clubs.png" id="5_1ln8r"]
+[ext_resource type="Texture2D" uid="uid://cxlcu8irr23rf" path="res://PNG-cards-1.3/5_of_clubs.png" id="6_8j766"]
+[ext_resource type="Texture2D" uid="uid://ceb0xw8mklc7s" path="res://PNG-cards-1.3/4_of_clubs.png" id="6_qbqfe"]
+[ext_resource type="PackedScene" uid="uid://6qwsj8dga3j1" path="res://panel.tscn" id="7_il7lq"]
+[ext_resource type="Texture2D" uid="uid://de5tjv5ccmofj" path="res://PNG-cards-1.3/6_of_clubs.png" id="8_3tbqa"]
+[ext_resource type="Texture2D" uid="uid://724a1qnx6btj" path="res://PNG-cards-1.3/7_of_clubs.png" id="9_8p1bf"]
+[ext_resource type="Texture2D" uid="uid://cltn8vuvgifld" path="res://PNG-cards-1.3/8_of_clubs.png" id="10_qoqfp"]
+[ext_resource type="Texture2D" uid="uid://cs0quiumeqh2k" path="res://PNG-cards-1.3/9_of_clubs.png" id="11_yo7gm"]
+[ext_resource type="Texture2D" uid="uid://bwbxlr6dilwq7" path="res://PNG-cards-1.3/10_of_clubs.png" id="12_ybm2i"]
+[ext_resource type="Texture2D" uid="uid://xnkicpa7g7p" path="res://PNG-cards-1.3/jack_of_clubs2.png" id="13_rf35e"]
+[ext_resource type="Texture2D" uid="uid://bih4q4qt3qdua" path="res://PNG-cards-1.3/queen_of_clubs2.png" id="14_kcfum"]
+[ext_resource type="Texture2D" uid="uid://i4fw5kwdopx3" path="res://PNG-cards-1.3/king_of_clubs2.png" id="15_ih4s4"]
+[ext_resource type="Texture2D" uid="uid://3qaiijl64sy1" path="res://PNG-cards-1.3/ace_of_diamonds.png" id="16_wci4d"]
+[ext_resource type="Texture2D" uid="uid://cnparilb06fvv" path="res://PNG-cards-1.3/2_of_diamonds.png" id="17_odah5"]
+[ext_resource type="Texture2D" uid="uid://d154mivde8ne1" path="res://PNG-cards-1.3/3_of_diamonds.png" id="18_r6h4l"]
+[ext_resource type="Texture2D" uid="uid://ckle0p5nccik1" path="res://PNG-cards-1.3/4_of_diamonds.png" id="19_tnhth"]
+[ext_resource type="Texture2D" uid="uid://bc4wknrb3qs88" path="res://PNG-cards-1.3/5_of_diamonds.png" id="20_j17ml"]
+[ext_resource type="Texture2D" uid="uid://crms0tcge0u3f" path="res://PNG-cards-1.3/6_of_diamonds.png" id="21_t0no5"]
+[ext_resource type="Texture2D" uid="uid://bh2yqo6iwy1qc" path="res://PNG-cards-1.3/7_of_diamonds.png" id="22_lbli2"]
+[ext_resource type="Texture2D" uid="uid://0q06chytfwao" path="res://PNG-cards-1.3/8_of_diamonds.png" id="23_4xwor"]
+[ext_resource type="Texture2D" uid="uid://d1mqhvveo4o6u" path="res://PNG-cards-1.3/9_of_diamonds.png" id="24_lgn2h"]
+[ext_resource type="Texture2D" uid="uid://ce40elqi4yfqe" path="res://PNG-cards-1.3/10_of_diamonds.png" id="25_8por7"]
+[ext_resource type="Texture2D" uid="uid://bmascf7pmo5bi" path="res://PNG-cards-1.3/jack_of_diamonds2.png" id="26_ykm3a"]
+[ext_resource type="Texture2D" uid="uid://cjyr7gb06b6sn" path="res://PNG-cards-1.3/queen_of_diamonds2.png" id="27_j64hs"]
+[ext_resource type="Texture2D" uid="uid://bramqskx5cpvo" path="res://PNG-cards-1.3/king_of_diamonds2.png" id="28_wjhkg"]
+[ext_resource type="Texture2D" uid="uid://cfat0vrgc0ptr" path="res://PNG-cards-1.3/ace_of_hearts.png" id="29_uv3he"]
+[ext_resource type="Texture2D" uid="uid://dsod4s7vo733s" path="res://PNG-cards-1.3/2_of_hearts.png" id="30_ubsgo"]
+[ext_resource type="Texture2D" uid="uid://bh2spotqpsr8c" path="res://PNG-cards-1.3/3_of_hearts.png" id="31_s6k1n"]
+[ext_resource type="Texture2D" uid="uid://ciw042aqn67ko" path="res://PNG-cards-1.3/4_of_hearts.png" id="32_gc7p5"]
+[ext_resource type="Texture2D" uid="uid://dn35puiiaam5l" path="res://PNG-cards-1.3/5_of_hearts.png" id="33_gcjlh"]
+[ext_resource type="Texture2D" uid="uid://c4p0sg2gyw5fn" path="res://PNG-cards-1.3/6_of_hearts.png" id="34_h6agg"]
+[ext_resource type="Texture2D" uid="uid://5pud8rnwgcga" path="res://PNG-cards-1.3/7_of_hearts.png" id="35_picxi"]
+[ext_resource type="Texture2D" uid="uid://cg5v1s13sevik" path="res://PNG-cards-1.3/8_of_hearts.png" id="36_yejfy"]
+[ext_resource type="Texture2D" uid="uid://cf4l0cww8apxr" path="res://PNG-cards-1.3/9_of_hearts.png" id="37_xw2qo"]
+[ext_resource type="Texture2D" uid="uid://dy33tnclf5r6e" path="res://PNG-cards-1.3/10_of_hearts.png" id="38_6roj1"]
+[ext_resource type="Texture2D" uid="uid://bm47qchknsexk" path="res://PNG-cards-1.3/jack_of_hearts2.png" id="39_0jbm0"]
+[ext_resource type="Texture2D" uid="uid://d2bhc8gf36hyd" path="res://PNG-cards-1.3/queen_of_hearts2.png" id="40_4g2ae"]
+[ext_resource type="Texture2D" uid="uid://b4kx241ibdyir" path="res://PNG-cards-1.3/king_of_hearts2.png" id="41_23x1m"]
+[ext_resource type="Texture2D" uid="uid://nviemxvs7lj3" path="res://PNG-cards-1.3/ace_of_spades2.png" id="42_c58b2"]
+[ext_resource type="Texture2D" uid="uid://b6h3qu7bmecaj" path="res://PNG-cards-1.3/2_of_spades.png" id="43_h8jcx"]
+[ext_resource type="Texture2D" uid="uid://di8ll8kpeylc3" path="res://PNG-cards-1.3/3_of_spades.png" id="44_1wm3g"]
+[ext_resource type="Texture2D" uid="uid://b1a1wmjwu5b6w" path="res://PNG-cards-1.3/4_of_spades.png" id="45_kt54u"]
+[ext_resource type="Texture2D" uid="uid://d3buywkffd714" path="res://PNG-cards-1.3/5_of_spades.png" id="46_ll63v"]
+[ext_resource type="Texture2D" uid="uid://cefgj8nrjifd2" path="res://PNG-cards-1.3/6_of_spades.png" id="47_h8ruf"]
+[ext_resource type="Texture2D" uid="uid://b41vjpnepacp8" path="res://PNG-cards-1.3/7_of_spades.png" id="48_fondk"]
+[ext_resource type="Texture2D" uid="uid://d2htix87k336q" path="res://PNG-cards-1.3/8_of_spades.png" id="49_i4iu6"]
+[ext_resource type="Texture2D" uid="uid://chm0cxostmbd1" path="res://PNG-cards-1.3/9_of_spades.png" id="50_kyyb4"]
+[ext_resource type="Texture2D" uid="uid://c7rrkpcppl47c" path="res://PNG-cards-1.3/10_of_spades.png" id="51_gjjud"]
+[ext_resource type="Texture2D" uid="uid://dkysd2co6rqve" path="res://PNG-cards-1.3/jack_of_spades2.png" id="52_6f1t3"]
+[ext_resource type="Texture2D" uid="uid://choldgr0t8vlr" path="res://PNG-cards-1.3/queen_of_spades2.png" id="53_tqjsv"]
+[ext_resource type="Texture2D" uid="uid://bijyihgukshg3" path="res://PNG-cards-1.3/king_of_spades2.png" id="54_3h470"]
+[ext_resource type="PackedScene" uid="uid://c1mggxrhe4ojq" path="res://spawner.tscn" id="56_a65wa"]
+
+[node name="Table" type="Node2D" node_paths=PackedStringArray("bottomArea0", "bottomArea1", "bottomArea2", "bottomArea3", "bottomArea4", "bottomArea5", "bottomArea6")]
+script = ExtResource("1_xln7c")
+card_node = ExtResource("1_3fj26")
+cardFaces = Array[Texture2D]([ExtResource("3_duadt"), ExtResource("4_v68qf"), ExtResource("5_1ln8r"), ExtResource("6_qbqfe"), ExtResource("6_8j766"), ExtResource("8_3tbqa"), ExtResource("9_8p1bf"), ExtResource("10_qoqfp"), ExtResource("11_yo7gm"), ExtResource("12_ybm2i"), ExtResource("13_rf35e"), ExtResource("14_kcfum"), ExtResource("15_ih4s4"), ExtResource("16_wci4d"), ExtResource("17_odah5"), ExtResource("18_r6h4l"), ExtResource("19_tnhth"), ExtResource("20_j17ml"), ExtResource("21_t0no5"), ExtResource("22_lbli2"), ExtResource("23_4xwor"), ExtResource("24_lgn2h"), ExtResource("25_8por7"), ExtResource("26_ykm3a"), ExtResource("27_j64hs"), ExtResource("28_wjhkg"), ExtResource("29_uv3he"), ExtResource("30_ubsgo"), ExtResource("31_s6k1n"), ExtResource("32_gc7p5"), ExtResource("33_gcjlh"), ExtResource("34_h6agg"), ExtResource("35_picxi"), ExtResource("36_yejfy"), ExtResource("37_xw2qo"), ExtResource("38_6roj1"), ExtResource("39_0jbm0"), ExtResource("40_4g2ae"), ExtResource("41_23x1m"), ExtResource("42_c58b2"), ExtResource("43_h8jcx"), ExtResource("44_1wm3g"), ExtResource("45_kt54u"), ExtResource("46_ll63v"), ExtResource("47_h8ruf"), ExtResource("48_fondk"), ExtResource("49_i4iu6"), ExtResource("50_kyyb4"), ExtResource("51_gjjud"), ExtResource("52_6f1t3"), ExtResource("53_tqjsv"), ExtResource("54_3h470")])
+bottomArea0 = NodePath("panel5")
+bottomArea1 = NodePath("panel6")
+bottomArea2 = NodePath("panel7")
+bottomArea3 = NodePath("panel8")
+bottomArea4 = NodePath("panel9")
+bottomArea5 = NodePath("panel10")
+bottomArea6 = NodePath("panel11")
+
+[node name="panel" parent="." instance=ExtResource("7_il7lq")]
+position = Vector2(1076, 232)
+group_name = "top"
+
+[node name="panel2" parent="." instance=ExtResource("7_il7lq")]
+position = Vector2(1358, 228)
+group_name = "top"
+
+[node name="panel3" parent="." instance=ExtResource("7_il7lq")]
+position = Vector2(1686, 228)
+group_name = "top"
+
+[node name="panel4" parent="." instance=ExtResource("7_il7lq")]
+position = Vector2(2040, 218)
+group_name = "top"
+
+[node name="panel5" parent="." instance=ExtResource("7_il7lq")]
+position = Vector2(174, 789)
+group_name = "bottom"
+
+[node name="panel6" parent="." instance=ExtResource("7_il7lq")]
+position = Vector2(462, 789)
+group_name = "bottom"
+
+[node name="panel7" parent="." instance=ExtResource("7_il7lq")]
+position = Vector2(784, 789)
+group_name = "bottom"
+
+[node name="panel8" parent="." instance=ExtResource("7_il7lq")]
+position = Vector2(1074, 795)
+group_name = "bottom"
+
+[node name="panel9" parent="." instance=ExtResource("7_il7lq")]
+position = Vector2(1372, 789)
+group_name = "bottom"
+
+[node name="panel10" parent="." instance=ExtResource("7_il7lq")]
+position = Vector2(1704, 789)
+group_name = "bottom"
+
+[node name="panel11" parent="." instance=ExtResource("7_il7lq")]
+position = Vector2(2052, 789)
+group_name = "bottom"
+
+[node name="Spawner" parent="." instance=ExtResource("56_a65wa")]
+position = Vector2(182, 245)
+card_node = ExtResource("1_3fj26")
