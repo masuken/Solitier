@@ -1,2 +1,2 @@
 # Solitier
-Godotによるソリティア
+ゲームエンジンGodotによるソリティア
